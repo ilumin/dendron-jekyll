@@ -79,7 +79,8 @@ function initSearch() {
 
       var index = lunr(function(){
         this.ref('id');
-        this.field('title', { boost: 200 });
+        this.field('hpath', { boost: 200 });
+        this.field('title', { boost: 100 });
         this.field('content', { boost: 2 });
         {%- if site.search.rel_url != false %}
         this.field('relUrl');
@@ -90,6 +91,7 @@ function initSearch() {
           this.add({
             id: i,
             title: docs[i].title,
+            hpath: docs[i].hpath,
             content: docs[i].content,
             {%- if site.search.rel_url != false %}
             relUrl: docs[i].relUrl
@@ -351,7 +353,7 @@ function searchLoaded(index, docs) {
       {%- if site.search.rel_url != false %}
       var resultRelUrl = document.createElement('span');
       resultRelUrl.classList.add('search-result-rel-url');
-      resultRelUrl.innerText = doc.relUrl;
+      resultRelUrl.innerText = doc.hpath;
       resultTitle.appendChild(resultRelUrl);
       {%- endif %}
     }
