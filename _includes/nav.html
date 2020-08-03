@@ -23,7 +23,10 @@
             {%- assign active = false -%}
             {%- assign children = hierarchy | where_exp:"item", "item.name == node.id" | map: "items" | first -%}
             {%- if children -%}
-              {%- include nav.html nodes=children -%}
+              {%- if node.has_collection -%}
+              {%- else -%}
+                {%- include nav.html nodes=children -%}
+              {%- endif -%}
             {%- endif -%}
           {%- endif -%}
         </li>
