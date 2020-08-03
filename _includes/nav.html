@@ -3,10 +3,6 @@
 {%- if groups.size > 0 -%}
   <ul class="nav-list">
     {%- for group in groups -%}
-      {%- if group.name != "" -%}
-        <h4>{{ group.name }}</h4>
-      {%- endif -%}
-
       {%- assign ordered_pages_list = group.items | where_exp:"item", "item.nav_order != nil" -%}
       {%- assign unordered_pages_list = group.items| where_exp:"item", "item.nav_order == nil" -%}
       {%- if site.nav_sort == 'case_insensitive' -%}
