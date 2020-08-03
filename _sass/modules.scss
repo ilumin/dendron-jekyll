@@ -18,3 +18,8 @@
 @import "./code";
 @import "./utilities/utilities";
 @import "./print";
+
+@import "minimal-mistakes/variables";
+@import "minimal-mistakes/vendor/breakpoint/breakpoint";
+@import "minimal-mistakes/mixins";
+@import "minimal-mistakes/sidebar";
