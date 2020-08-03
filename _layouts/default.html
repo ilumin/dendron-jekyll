@@ -103,7 +103,9 @@ layout: table_wrappers
           {{ content }}
         {% endif %}
 
-        {%- if page.has_toc != false -%}
+        {%- if page.has_collection -%}
+          {% include documents-collection.html sort_by=page.sort_by sort_order=page.sort_order type=page.entries_layout %}
+        {%- elsif page.has_toc -%}
           {%- include toc.html -%}
         {%- endif -%}
 
