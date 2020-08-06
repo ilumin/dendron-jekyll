@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|bin|_layouts|_includes|lib|Rakefile|_sass|LICENSE|README)}i) }
-  spec.executables   << 'dendron-jekyll'
+  spec.executables   << 'just-the-docs'
 
   spec.add_development_dependency "bundler", "~> 2.1.4"
   spec.add_runtime_dependency "jekyll", ">= 3.8.5"
