@@ -7,3 +7,9 @@ gem build just-the-docs.gemspec
 # git add *.gem
 
 # git commit -m 'Bump just-the-docs gem package'
+
+# === Steps
+# bump version in just-the-docs.gemspec
+# gem build
+# push to github
+# gem push {version | eg: dendron-jekyll-0.3.4.gem}

@@ -19,7 +19,14 @@
 @import "./utilities/utilities";
 @import "./print";
 
+// Portal Start
+$base-line-height: 1.5 !default;
+$spacing-unit:     30px !default;
+$text-color:       #111 !default;
+// Portal end
+
 @import "minimal-mistakes/variables";
 @import "minimal-mistakes/vendor/breakpoint/breakpoint";
 @import "minimal-mistakes/mixins";
 @import "minimal-mistakes/sidebar";
+@import "portal.scss";
