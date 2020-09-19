@@ -106,8 +106,6 @@ layout: table_wrappers
 
       <div class="alert alert-primary" role="alert">
         This page was generated from content adapted from the following <a href="#" data-html="true" data-toggle="popover" title="Attributions">sources</a>
-
-        <a href="{{page.source.url}}" target="_blank">{% if page.source.name %} {{page.source.name}} {% else %} {{page.source.url}} {% endif %}
         </a>
       </div>
 
@@ -116,7 +114,7 @@ layout: table_wrappers
           $('[data-toggle="popover"]').popover({content: `
             <ul>
             {% for source in page.sources %}
-            <li> <a href="{{source.url}}" target="_blank">{% if source.name %} {{source.name}} {% else %} {{source.url}} {% endif %} </li>
+            <li> <a href="{{source.url}}" target="_blank">{% if source.name and source.name != "" %} {{source.name}} {% else %} {{source.url}} {% endif %} </li>
             {% endfor %}
             </ul>
           `})
