@@ -2,7 +2,7 @@
 {%- if tocNodes.size > 0 -%}
   <hr>
   <h2 class="text-delta">Table of contents</h2>
-  {%- assign sorted_nodes = tocNodes | sort_natural:"title" -%}
+  {%- assign sorted_nodes = tocNodes | sort_natural:"nav_order" -%}
   <ul>
     {%- for tocNode in sorted_nodes -%}
       <li>
