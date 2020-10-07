@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "dendron-jekyll"
-  spec.version       = "0.3.12"
+  spec.version       = "0.3.13"
   spec.authors       = ["Kevin Lin"]
   spec.email         = ["kevin@thence.io"]
 
