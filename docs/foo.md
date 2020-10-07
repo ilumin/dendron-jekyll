@@ -7,10 +7,6 @@ sources:
 
 # Foo
 
-<div>
-f(x) = sin(x) 
-</div>
-
 $$
 f(x) = sin(x) 
 $$
