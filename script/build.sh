@@ -3,7 +3,7 @@
 
 # TODO: bump version in just-the-docs.gemspec
 # set new version here
-version=0.3.10
+version=0.3.11
 echo "Packaging gem... \n"
 gem build just-the-docs.gemspec
 git add .
